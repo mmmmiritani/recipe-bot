@@ -2,7 +2,7 @@ import requests
 import json
 import time
 import pandas as pd
-from pprint import pprint
+# pprint import pprint
 
 def get_recipe(replyText):
     # 1. 楽天レシピのレシピカテゴリ一覧を取得する
