@@ -43,7 +43,7 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text="https://github.com/YumaMatsubara/recipe-bot/tree/replyRecipe"))
 
 
 if __name__ == "__main__":
