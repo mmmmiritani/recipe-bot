@@ -26,7 +26,7 @@ def get_recipe(replyText):
         df = df.append({'category1':parent_dict[category['parentCategoryId']],'category2':category['parentCategoryId'],'category3':category['categoryId'],'categoryId':parent_dict[category['parentCategoryId']]+"-"+str(category['parentCategoryId'])+"-"+str(category['categoryId']),'categoryName':category['categoryName']}, ignore_index=True)
     
     # 2. キーワードからカテゴリを抽出する
-    df_keyword = df.query('categoryName.str.contains(' + replyText + ')', engine='python')
+    df_keyword = df.query('categoryName.str.contains('+ '"' + replyText + '"' + ')', engine='python')
     
     # pprint(df_keyword)
     

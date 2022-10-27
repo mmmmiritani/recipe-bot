@@ -33,7 +33,9 @@ for category in json_data['result']['small']:
 
 
 # 2. キーワードからカテゴリを抽出する
-df_keyword = df.query('categoryName.str.contains("ぶり")', engine='python')
+text = 'ぶり'
+inp = 'categoryName.str.contains(' + '"' + text + '"' + ')'
+df_keyword = df.query(inp, engine='python')
 df_keyword = df_keyword.query('categoryName.str.contains("大根")', engine='python')
 
 #pprint(df_keyword)
