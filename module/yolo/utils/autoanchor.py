@@ -10,8 +10,8 @@ import torch
 import yaml
 from tqdm import tqdm
 
-from utils import TryExcept
-from utils.general import LOGGER, colorstr
+from . import TryExcept
+from .general import LOGGER, colorstr
 
 PREFIX = colorstr('AutoAnchor: ')
 
