@@ -242,6 +242,7 @@ class Detect:
         weightsUrl = ROOT / 'exp/weights/best.pt'
         # sourceUrl = ROOT / 'data/images/cabbege15.jpg'
         # sourceUrl = 'https://cdn.pixabay.com/photo/2015/05/04/10/16/vegetables-752153_960_720.jpg'
+        # sourceUrl = 'https://recipe-bot-media.herokuapp.com/static/17100253301686.jpg'
         self.run(weights=weightsUrl, source=image, save_txt=True, exist_ok=True)
 
 
@@ -269,5 +270,5 @@ class Detect:
         print(recipesUrl)
         """
 
-#detect = Detect()
-#detect.detect_img()
+# detect = Detect()
+# detect.detect_img()
