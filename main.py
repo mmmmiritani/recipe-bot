@@ -75,7 +75,7 @@ def handle_image(event):
         [TextSendMessage(text=replyUrl[0]), TextSendMessage(text=replyUrl[1]), TextSendMessage(text=replyUrl[2]), TextSendMessage(text=replyUrl[3])])
 
     except Exception as e:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='エラーが発生しました'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=e + ' エラーが発生しました'))
     
 
 
