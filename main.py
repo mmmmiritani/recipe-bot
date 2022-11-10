@@ -64,18 +64,18 @@ def handle_image(event):
         f.write(message_content.content)
 
     contentUrl='https://recipe-bot-media.herokuapp.com/' + 'static/' + event.message.id + '.jpg'
-    try:
-        detectClass = Detect()
-        rankName = detectClass.detect_img(image=contentUrl)
-        recipeClass = Recipe()
-        replyUrl = recipeClass.get_recipe(rankName[0])
+    #try:
+    detectClass = Detect()
+    rankName = detectClass.detect_img(image=contentUrl)
+    recipeClass = Recipe()
+    replyUrl = recipeClass.get_recipe(rankName[0])
 
-        line_bot_api.reply_message(
-        event.reply_token,
-        [TextSendMessage(text=replyUrl[0]), TextSendMessage(text=replyUrl[1]), TextSendMessage(text=replyUrl[2]), TextSendMessage(text=replyUrl[3])])
+    line_bot_api.reply_message(
+    event.reply_token,
+    [TextSendMessage(text=replyUrl[0]), TextSendMessage(text=replyUrl[1]), TextSendMessage(text=replyUrl[2]), TextSendMessage(text=replyUrl[3])])
 
-    except Exception as e:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=e + ' エラーが発生しました'))
+    #except Exception as e:
+    #    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=' エラーが発生しました'))
     
 
 
